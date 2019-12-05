@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 class Carousel extends Component {
-  state = {};
+  state = { currentSlides: [{ src: "", headline: "" }], slideIndex: 0 };
   render() {
     return (
       <Fragment>
