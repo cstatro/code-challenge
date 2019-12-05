@@ -21,13 +21,33 @@ class Carousel extends Component {
     this.setState({ currentSlides, slideIndex: 0 });
   };
 
+  moveSlideForward = () => {
+    const { currentSlides, slideIndex } = this.state;
+    if (slideIndex === currentSlides.length - 1) {
+      this.resetSlides();
+    } else {
+      this.setState({ slideIndex: slideIndex + 1 });
+    }
+  };
+
   render() {
+    const { slideIndex, currentSlides } = this.state;
+    const currentSlide = currentSlides[slideIndex];
+    const indicatorText = `${slideIndex + 1}/${currentSlides.length}`;
+
     return (
       <Fragment>
         <div className="slidebox">
-          <img src="" alt="" className="slide" />
+          <img
+            src={currentSlide.src}
+            alt={currentSlide.headline}
+            className="slide"
+          />
         </div>
-        <button className="advance-button">Advance Slide</button>
+        <div>{currentSlide.headline}</div>
+        <button className="advance-button">
+          Advance Slide {indicatorText}
+        </button>
       </Fragment>
     );
   }
@@ -35,7 +55,6 @@ class Carousel extends Component {
 
 export default Carousel;
 
-// 3. When the page loads, show a random slide to a user.
 // 4. Under the slide, have a “Next” button.
 // 5. When the “Next” button is tapped/clicked, show another slide but ensure it is not a repeat
 // slide that the user has already seen.
