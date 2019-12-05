@@ -44,7 +44,7 @@ class Carousel extends Component {
             className="slide"
           />
         </div>
-        <div>{currentSlide.headline}</div>
+        <div className="headline">{currentSlide.headline}</div>
         <button onClick={this.moveSlideForward} className="advance-button">
           Advance Slide {indicatorText}
         </button>
