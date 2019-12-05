@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  font-family: "Playfair Display", serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.slidebox {
+  width: 75%;
+  height: 60%;
+  background: blue;
+}
+
+@media screen and (max-width: 480px) {
+  /* for phones */
+  * {
+    background: greenyellow;
+  }
+}
