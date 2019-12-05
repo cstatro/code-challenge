@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
-html {
+html,
+#root,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -21,6 +23,13 @@ html {
   width: 75%;
   height: 60%;
   background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide {
+  height: 100%;
+  width: auto;
 }
 
 @media screen and (max-width: 480px) {
